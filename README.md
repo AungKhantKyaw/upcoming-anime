@@ -1,7 +1,7 @@
 # 📺 Upcoming Anime Episode List
 
-A sleek React app that displays upcoming anime episodes, grouped by date, with countdown timers and pagination.  
-Built with **Vite**, **React**, **TailwindCSS**, and **TypeScript**.
+A sleek React app that displays upcoming anime episodes with countdown timers and pagination.  
+Built with **Vite**, **React**, **TailwindCSS**, **ExpressJS**, and **TypeScript**.
 
 ---
 
