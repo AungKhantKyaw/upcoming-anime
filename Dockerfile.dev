@@ -1,0 +1,15 @@
+# Frontend dev image
+FROM node:20
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install --legacy-peer-deps
+
+COPY . .
+
+# Expose Vite port
+EXPOSE 5173
+
+# Start dev server
+CMD ["npm", "run", "dev"]
