@@ -1,69 +1,71 @@
-# React + TypeScript + Vite
+# 📺 Upcoming Anime Episode List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek React app that displays upcoming anime episodes, grouped by date, with countdown timers and pagination.  
+Built with **Vite**, **React**, **TailwindCSS**, and **TypeScript**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🎨 **Modern UI** with TailwindCSS (gradient background, sticky headers, hover effects)  
+- ⏳ **Countdown timer** for upcoming episodes  
+- 🖼️ **Anime covers** with fallback placeholders  
+- 🔄 **Pagination** (next / previous pages)  
+- 📱 **Responsive design** (mobile → desktop)  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- [Vite](https://vitejs.dev/) – Fast dev environment  
+- [React](https://react.dev/) – UI library  
+- [TailwindCSS](https://tailwindcss.com/) – Styling  
+- [TypeScript](https://www.typescriptlang.org/) – Type safety  
+- [React Icons](https://react-icons.github.io/react-icons/) – Icons  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## ⚡ Getting Started
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/AungKhantKyaw/upcoming-anime.git
+cd upcoming-anime
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. Install dependencies
+```bash
+npm install
 ```
+
+### 3. Set up environment variables
+Create a `.env` file in the root with:
+
+```env
+VITE_API_URL=http://localhost:5002
+```
+
+> The API should provide an endpoint like:  
+> `/api/anime/upcoming?page=1&perPage=32`
+
+### 4. Run the dev server
+```bash
+npm run dev
+```
+
+Then open 👉 [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── components/
+│   └── UpcomingAnime.tsx   # Main component
+├── App.tsx
+├── main.tsx
+└── index.css
+```
+
+---
